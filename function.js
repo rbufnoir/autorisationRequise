@@ -7,11 +7,9 @@ function hideDiag() {
 }
 
 function ageChecker() {
-  const today = new Date();
-  const birthday = new Date(document.getElementById("dateForm").value);
-  let diff = today.getTime() - birthday.getTime();
+  const userAge = document.getElementById("dateForm").value;
 
-  if (diff > 568036800000){
+  if (userAge >= 18){
     hideDiag();
     document.body.classList.remove("blur")
   }
